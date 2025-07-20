@@ -1,0 +1,382 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 15 23 42;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+    --primary: 51 65 85;
+    --primary-foreground: 255 255 255;
+    --primary-hover: 30 41 59;
+    --secondary: 226 232 240;
+    --secondary-foreground: 30 41 59;
+    --secondary-hover: 203 213 225;
+    --muted: 71 85 105;
+    --muted-foreground: 71 85 105;
+    --accent: 249 115 22;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 203 213 225;
+    --input: 203 213 225;
+    --ring: 16 185 129;
+    --navbar: 248 250 252;
+    --navbar-blur: 248 250 252 / 0.95;
+  }
+
+  .theme-dark {
+    --background: 0 0 0;
+    --foreground: 255 255 255;
+    --card: 17 17 17;
+    --card-foreground: 255 255 255;
+    --popover: 17 17 17;
+    --popover-foreground: 255 255 255;
+    --primary: 255 255 255; /* White background for buttons */
+    --primary-foreground: 0 0 0; /* Black text for buttons */
+    --primary-hover: 240 240 240; /* Light gray for hover */
+    --secondary: 38 38 38;
+    --secondary-foreground: 255 255 255;
+    --secondary-hover: 64 64 64;
+    --muted: 163 163 163;
+    --muted-foreground: 163 163 163;
+    --accent: 249 115 22;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 64 64 64;
+    --input: 64 64 64;
+    --ring: 139 92 246;
+    --navbar: 17 17 17;
+    --navbar-blur: 17 17 17 / 0.8;
+  }
+
+  .theme-unique {
+    --background: 28 25 23;
+    --foreground: 245 245 244;
+    --card: 41 37 36;
+    --card-foreground: 245 245 244;
+    --popover: 41 37 36;
+    --popover-foreground: 245 245 244;
+    --primary: 251 146 60;
+    --primary-foreground: 28 25 23;
+    --primary-hover: 249 115 22;
+    --secondary: 68 64 60;
+    --secondary-foreground: 245 245 244;
+    --secondary-hover: 87 83 78;
+    --muted: 168 162 158;
+    --muted-foreground: 168 162 158;
+    --accent: 239 68 68;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 87 83 78;
+    --input: 87 83 78;
+    --ring: 251 146 60;
+    --navbar: 41 37 36;
+    --navbar-blur: 41 37 36 / 0.8;
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: rgb(var(--background));
+  }
+  
+  .bg-card {
+    background-color: rgb(var(--card));
+  }
+  
+  .bg-navbar {
+    background-color: rgb(var(--navbar));
+  }
+  
+  .bg-navbar-blur {
+    background-color: rgb(var(--navbar-blur));
+  }
+  
+  .bg-primary {
+    background-color: rgb(var(--primary));
+  }
+  
+  .bg-primary-hover {
+    background-color: rgb(var(--primary-hover));
+  }
+  
+  .bg-secondary {
+    background-color: rgb(var(--secondary));
+  }
+  
+  .bg-secondary-hover {
+    background-color: rgb(var(--secondary-hover));
+  }
+  
+  .text-foreground {
+    color: rgb(var(--foreground));
+  }
+  
+  .text-primary {
+    color: rgb(var(--primary));
+  }
+  
+  .text-primary-hover {
+    color: rgb(var(--primary-hover));
+  }
+  
+  .text-muted {
+    color: rgb(var(--muted));
+  }
+  
+  .border-border {
+    border-color: rgb(var(--border));
+  }
+  
+  .border-primary {
+    border-color: rgb(var(--primary));
+  }
+  
+  .hover\:bg-primary-hover:hover {
+    background-color: rgb(var(--primary-hover));
+  }
+  
+  .hover\:bg-secondary:hover {
+    background-color: rgb(var(--secondary));
+  }
+  
+  .hover\:bg-secondary-hover:hover {
+    background-color: rgb(var(--secondary-hover));
+  }
+  
+  .hover\:text-primary:hover {
+    color: rgb(var(--primary));
+  }
+  
+  .hover\:text-primary-hover:hover {
+    color: rgb(var(--primary-hover));
+  }
+  
+  .hover\:border-primary:hover {
+    border-color: rgb(var(--primary));
+  }
+  
+  .focus\:ring-primary:focus {
+    --tw-ring-color: rgb(var(--primary));
+  }
+}
+
+/* Professional scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--muted));
+  border-radius: 4px;
+  border: 1px solid rgb(var(--secondary));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--primary));
+}
+
+/* Professional glass morphism effect */
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Professional gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--primary-hover)) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(145deg, rgb(var(--card)) 0%, rgba(var(--secondary), 0.5) 100%);
+}
+
+/* Professional shadows */
+.shadow-professional {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-professional-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-professional-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark theme specific shadows */
+.theme-dark .shadow-professional {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.theme-dark .shadow-professional-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.theme-dark .shadow-professional-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Professional typography */
+.text-gradient {
+  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Auto-resize textarea */
+textarea {
+  field-sizing: content;
+  min-height: 44px;
+  max-height: 120px;
+  resize: none;
+}
+
+/* Professional focus states */
+.focus-professional:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: rgb(var(--primary));
+  ring-offset: 2px;
+  ring-offset-color: rgb(var(--background));
+}
+
+/* Professional button styles */
+.btn-professional {
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.btn-primary {
+  background: rgb(var(--primary));
+  color: rgb(var(--primary-foreground));
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: rgb(var(--primary-hover));
+}
+
+.btn-secondary {
+  background: rgb(var(--secondary));
+  color: rgb(var(--secondary-foreground));
+  border: 1px solid rgb(var(--border));
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgb(var(--secondary-hover));
+}
+
+/* Dark theme specific button styles - simplified */
+.theme-dark .btn-primary {
+  background: rgb(var(--primary));
+  color: rgb(var(--primary-foreground));
+  border: 1px solid rgb(var(--border));
+}
+
+.theme-dark .btn-primary:hover {
+  background: rgb(var(--primary-hover));
+}
+
+.theme-dark .btn-secondary {
+  background: rgb(var(--secondary));
+  color: rgb(var(--secondary-foreground));
+  border: 1px solid rgb(var(--border));
+}
+
+.theme-dark .btn-secondary:hover {
+  background: rgb(var(--secondary-hover));
+}
+
+/* Override button effects for sidebar elements */
+.w-80 .btn-professional:hover {
+  transform: none !important;
+}
+
+.w-80 .btn-professional:active {
+  transform: none !important;
+}
+
+.w-80 button:not(.btn-professional) {
+  transform: none !important;
+}
+
+.w-80 button:not(.btn-professional):hover {
+  transform: none !important;
+}
+
+.w-80 button:not(.btn-professional):active {
+  transform: none !important;
+}
+
+/* Professional loading animation */
+@keyframes pulse-professional {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-professional {
+  animation: pulse-professional 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Professional typing indicator */
+@keyframes typing-dots {
+  0%, 20% {
+    color: rgb(var(--muted));
+    transform: scale(1);
+  }
+  50% {
+    color: rgb(var(--primary));
+    transform: scale(1.2);
+  }
+  100% {
+    color: rgb(var(--muted));
+    transform: scale(1);
+  }
+}
+
+.typing-dot {
+  animation: typing-dots 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
