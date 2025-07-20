@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://koma-backend.up.railway.app';
+const API_BASE_URL = 'https://koma-ai.app/';
 
 interface Comic {
   _id: string;
