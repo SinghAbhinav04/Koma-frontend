@@ -10,9 +10,9 @@
     --card-foreground: 15 23 42;
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
-    --primary: 51 65 85;
-    --primary-foreground: 255 255 255;
-    --primary-hover: 30 41 59;
+    --primary: 15 23 42; /* Dark background for light theme buttons */
+    --primary-foreground: 255 255 255; /* White text for light theme buttons */
+    --primary-hover: 30 41 59; /* Darker on hover */
     --secondary: 226 232 240;
     --secondary-foreground: 30 41 59;
     --secondary-hover: 203 213 225;
@@ -121,6 +121,10 @@
   
   .text-primary {
     color: rgb(var(--primary));
+  }
+  
+  .text-primary-foreground {
+    color: rgb(var(--primary-foreground));
   }
   
   .text-primary-hover {
@@ -290,27 +294,6 @@ textarea {
 }
 
 .btn-secondary:hover {
-  background: rgb(var(--secondary-hover));
-}
-
-/* Dark theme specific button styles - simplified */
-.theme-dark .btn-primary {
-  background: rgb(var(--primary));
-  color: rgb(var(--primary-foreground));
-  border: 1px solid rgb(var(--border));
-}
-
-.theme-dark .btn-primary:hover {
-  background: rgb(var(--primary-hover));
-}
-
-.theme-dark .btn-secondary {
-  background: rgb(var(--secondary));
-  color: rgb(var(--secondary-foreground));
-  border: 1px solid rgb(var(--border));
-}
-
-.theme-dark .btn-secondary:hover {
   background: rgb(var(--secondary-hover));
 }
 

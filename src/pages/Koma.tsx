@@ -408,12 +408,12 @@ export const Koma: React.FC = () => {
           )}
         </div>
         
-        {/* Comic Detail Popup - Background only shows here */}
+        {/* Manga Detail Popup - Background only shows here */}
         {selectedComic && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50" onClick={() => setSelectedComic(null)}>
-            <div className="bg-gray-800/90 backdrop-blur-md rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto border border-gray-600/30" onClick={e => e.stopPropagation()}>
+          <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50" onClick={() => setSelectedComic(null)}>
+            <div className=" backdrop-blur-md rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto border border-gray-600/30" onClick={e => e.stopPropagation()}>
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-lg font-semibold text-white">Comic Details</h3>
+                <h3 className="text-lg font-semibold text-white">Manga Details</h3>
                 <button 
                   onClick={() => setSelectedComic(null)}
                   className="text-gray-400 hover:text-white transition-colors"
@@ -432,7 +432,7 @@ export const Koma: React.FC = () => {
                     height: 'auto',
                     aspectRatio: '640/420',
                     objectFit: 'contain',
-                    backgroundColor: '#374151'
+                    backgroundColor: '#0d0d0dff'
                   }}
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;

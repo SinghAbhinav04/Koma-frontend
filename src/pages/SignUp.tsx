@@ -386,7 +386,7 @@ export const SignUp: React.FC<SignUpProps> = ({ setIsLoggedIn, theme }) => {
               {/* Help links */}
               <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                 <p className="text-sm text-blue-700 dark:text-blue-300 mb-3">
-                  🔑 Need help getting your API key? We've got you covered!
+                   Need help getting your API key? We've got you covered!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-2">
                   <button
@@ -399,7 +399,7 @@ export const SignUp: React.FC<SignUpProps> = ({ setIsLoggedIn, theme }) => {
                   </button>
                 </div>
                 <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
-                  🔒 We don't store, use, or see your API key. 
+                   We don't store, use, or see your API key. 
                   <button
                     type="button"
                     onClick={() => navigate('/privacy-policy')}
@@ -433,7 +433,7 @@ export const SignUp: React.FC<SignUpProps> = ({ setIsLoggedIn, theme }) => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium bg-primary text-black hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed btn-professional"
+              className="w-full justify-ceter px-4 py-2 text-sm font-medium bg-black text-white hover:bg-gray-800 rounded-lg transition-colors"
             >
               {isLoading ? 'Creating account...' : 'Create account'}
             </button>

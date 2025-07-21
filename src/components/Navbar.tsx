@@ -160,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="flex space-x-3">
                 <motion.button
                   onClick={() => navigate('/login')}
-                  className="px-4 py-2 text-sm font-medium bg-primary text-black hover:bg-primary-hover rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium bg-black text-white hover:bg-gray-800 rounded-lg transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -168,7 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </motion.button>
                 <motion.button
                   onClick={() => navigate('/signup')}
-                  className="px-4 py-2 text-sm font-medium bg-primary text-black hover:bg-primary-hover rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium bg-black text-white hover:bg-gray-800 rounded-lg transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -297,7 +297,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           navigate('/login');
                           setIsMenuOpen(false);
                         }}
-                        className="px-3 py-2 text-left text-sm font-medium text-primary hover:text-primary-hover transition-colors rounded-lg hover:bg-secondary/30"
+                        className="px-3 py-2 text-left text-sm font-medium bg-black text-white hover:bg-gray-800 rounded-lg transition-colors btn-professional"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
@@ -310,7 +310,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           navigate('/signup');
                           setIsMenuOpen(false);
                         }}
-                        className="px-3 py-2 text-left text-sm font-medium bg-primary text-primary-foreground hover:bg-primary-hover rounded-lg transition-colors btn-professional"
+                        className="px-3 py-2 text-left text-sm font-medium bg-black text-white hover:bg-gray-800 rounded-lg transition-colors btn-professional"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.35 }}

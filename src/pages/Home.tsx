@@ -38,7 +38,7 @@ export const Home: React.FC<HomeProps> = ({ theme }) => {
     {
       icon: Globe,
       title: 'Available 24/7',
-      description: 'Access LexAI anytime, anywhere, from any device with seamless synchronization.',
+      description: 'Access Koma anytime, anywhere, from any device with seamless synchronization.',
       color: 'from-purple-500 to-pink-500'
     }
   ];
@@ -174,7 +174,7 @@ export const Home: React.FC<HomeProps> = ({ theme }) => {
               Why Choose <span className="text-gradient">Koma</span>?
             </h2>
             <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
-              Discover the features that make LexAI the perfect AI companion for your fun art generations.
+              Discover the features that make Koma the perfect AI companion for your fun art generations.
             </p>
           </motion.div>
 
